@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="split" dividerPositions="0.3271604938271605" prefHeight="515.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.EventCreate">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="208.0" style="-fx-background-color: #9de3f2;">
+            <children>
+                <ImageView fitHeight="181.0" fitWidth="158.0" layoutX="34.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imgs/TheDeepBlueLogo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="513.0" prefWidth="452.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <TextField fx:id="textName" layoutX="95.0" layoutY="65.0" prefHeight="27.0" prefWidth="248.0" promptText="Event Name" />
+                <TextField fx:id="textLocation" layoutX="95.0" layoutY="193.0" prefHeight="27.0" prefWidth="248.0" promptText="Location" />
+                <ImageView fx:id="exit" fitHeight="69.0" fitWidth="63.0" layoutX="95.0" layoutY="419.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imgs/icons8-back-arrow-64.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="create" fitHeight="63.0" fitWidth="77.0" layoutX="262.0" layoutY="411.0" onMouseClicked="#createButton" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imgs/icons8-check-circle-64.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+
+            <DatePicker fx:id="textDate" layoutX="95.0" layoutY="128.0" prefHeight="27.0" prefWidth="248.0" promptText="Date" />
+            <TextArea fx:id="textDesc" layoutX="95.0" layoutY="249.0" prefHeight="149.0" prefWidth="248.0" promptText="Description" />
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

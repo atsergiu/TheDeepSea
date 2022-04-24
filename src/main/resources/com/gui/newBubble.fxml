@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="650.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.NewBubble">
+   <children>
+      <TextField fx:id="bubbleName" layoutX="246.0" layoutY="119.0" prefHeight="25.0" prefWidth="230.0" />
+      <Label layoutX="194.0" layoutY="171.0" prefHeight="17.0" prefWidth="32.0" text="User:" />
+      <ImageView fitHeight="92.0" fitWidth="104.0" layoutX="297.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-foam-bubbles-90.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="user" layoutX="244.0" layoutY="167.0" prefHeight="25.0" prefWidth="230.0" />
+      <Label layoutX="165.0" layoutY="123.0" text="Bubble name:" />
+      <ImageView fx:id="add" fitHeight="64.0" fitWidth="72.0" layoutX="77.0" layoutY="421.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-add-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="delete" fitHeight="64.0" fitWidth="64.0" layoutX="510.0" layoutY="425.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-minus-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="finish" fitHeight="90.0" fitWidth="64.0" layoutX="294.0" layoutY="421.0" onMouseClicked="#finish" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-next-page-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="addList" layoutX="24.0" layoutY="199.0" prefHeight="222.0" prefWidth="189.0">
+        <columns>
+          <TableColumn fx:id="firstName1" prefWidth="94.0" text="First Name" />
+            <TableColumn fx:id="lastName1" prefWidth="96.0" text="Last Name" />
+        </columns>
+      </TableView>
+      <TableView fx:id="finalList" layoutX="438.0" layoutY="200.0" prefHeight="222.0" prefWidth="189.0">
+        <columns>
+          <TableColumn fx:id="firstName2" prefWidth="95.0" text="First Name" />
+            <TableColumn fx:id="lastName2" prefWidth="93.0" text="Last Name" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="104.0" fitWidth="113.0" layoutX="274.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-arrow-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="64.0" fitWidth="64.0" layoutX="21.0" layoutY="14.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="480.0" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="481.0" text="Remove">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="480.0" text="Finish">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

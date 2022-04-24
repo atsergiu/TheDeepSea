@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="515.0" prefWidth="650.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.BubblePage">
+   <children>
+      <Label fx:id="convName" alignment="CENTER" layoutX="412.0" layoutY="16.0" prefHeight="90.0" prefWidth="268.0" text="Conv Name" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="66.0" fitWidth="57.0" layoutX="25.0" layoutY="32.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ListView fx:id="messages" layoutX="31.0" layoutY="114.0" prefHeight="431.0" prefWidth="698.0" />
+      <TextArea fx:id="msg" layoutX="80.0" layoutY="553.0" prefHeight="39.0" prefWidth="618.0" style="-fx-border-color: #CAF0F8;" />
+      <ImageView fx:id="send" fitHeight="46.0" fitWidth="47.0" layoutX="699.0" layoutY="551.0" onKeyPressed="#enterSend" onMouseClicked="#sendMsg" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-send-comment-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="341.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-same-opinion-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="clear" fitHeight="46.0" fitWidth="46.0" layoutX="31.0" layoutY="549.0" onMouseClicked="#clearSelect" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-cancel-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="userList" fitHeight="57.0" fitWidth="57.0" layoutX="680.0" layoutY="32.0" onMouseClicked="#list" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-inquiry-64%20(2).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

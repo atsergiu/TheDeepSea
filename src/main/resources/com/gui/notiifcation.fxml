@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="184.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.Notifications">
+   <children>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="398.0">
+        <columns>
+          <TableColumn fx:id="notification" prefWidth="397.0" text="Notifications" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

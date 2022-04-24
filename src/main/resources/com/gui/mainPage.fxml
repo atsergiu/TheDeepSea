@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="split" dividerPositions="0.24036979969183359" prefHeight="515.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.MainPage">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="126.0" style="-fx-background-color: #9de3f2;">
+         <children>
+         <ImageView fx:id="newConv" fitHeight="59.0" fitWidth="59.0" layoutX="43.0" layoutY="40.0" onMouseClicked="#newBubble" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@imgs/icons8-bubble-64.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="friendMenu" fitHeight="67.0" fitWidth="75.0" layoutX="37.0" layoutY="145.0" onMouseClicked="#friendMenu" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@imgs/icons8-three-people-64.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+
+         <ImageView fx:id="events" fitHeight="59.0" fitWidth="59.0" layoutX="41.0" layoutY="267.0" onMouseClicked="#openEvents" pickOnBounds="true" preserveRatio="true">
+
+            <image>
+               <Image url="@imgs/icons8-event-100.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+         <ImageView fx:id="logout" fitHeight="59.0" fitWidth="59.0" layoutX="43.0" layoutY="383.0" onMouseClicked="#openLogout" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@imgs/icons8-logout-64.png" />
+            </image>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </ImageView>
+            <Label layoutX="40.0" layoutY="99.0" prefHeight="17.0" prefWidth="73.0" text="New Bubble">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="215.0" prefHeight="17.0" prefWidth="81.0" text="Friends Menu">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="330.0" prefHeight="17.0" prefWidth="43.0" text="Events">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="448.0" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+<!--   <Pane fx:id="pane" prefHeight="553.0" prefWidth="321.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.MainPage">-->
+   <Pane fx:id="pane" prefHeight="505.0" prefWidth="432.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+         <Label fx:id="name" layoutX="56.0" layoutY="36.0" prefHeight="33.0" prefWidth="306.0" text="Full Name">
+            <font>
+               <Font name="Times New Roman Bold" size="19.0" />
+            </font>
+         </Label>
+         <TextField fx:id="searchBar" layoutX="120.0" layoutY="100.0" prefHeight="26.0" prefWidth="270.0" />
+         <Label layoutX="56.0" layoutY="96.0" prefHeight="33.0" prefWidth="47.0" text="Bubble:" />
+         <Label fx:id="noConv" layoutX="120.0" layoutY="218.0" prefHeight="174.0" prefWidth="262.0" text="There are no conversations " textAlignment="CENTER" />
+         <GridPane fx:id="gridPane" prefHeight="30.0" prefWidth="294.0">
+              </GridPane>
+
+            <Pagination fx:id="pag" layoutX="56.0" layoutY="148.0" maxPageIndicatorCount="4" pageCount="10" prefHeight="343.0" prefWidth="340.0" />
+
+            <ImageView fx:id="raports" fitHeight="43.0" fitWidth="47.0" layoutX="419.0" layoutY="30.0" onMouseClicked="#raport" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/icons8-document-64.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+
+            <Label layoutX="423.0" layoutY="73.0" prefHeight="16.0" prefWidth="43.0" text="Report">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+
+               </font>
+            </Label>
+
+      </children>
+   </Pane>
+</items>
+        </SplitPane>

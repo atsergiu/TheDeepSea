@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="split" dividerPositions="0.3271604938271605" prefHeight="515.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.SignUpController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="208.0" style="-fx-background-color: #9de3f2;">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="158.0" layoutX="34.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/TheDeepBlueLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+<AnchorPane fx:id="textDate" prefHeight="513.0" prefWidth="452.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="textFirstName" layoutX="95.0" layoutY="72.0" prefHeight="27.0" prefWidth="115.0" promptText="First Name" />
+      <TextField fx:id="textEmail" layoutX="95.0" layoutY="203.5" prefHeight="27.0" prefWidth="230.0" promptText="Email" />
+      <PasswordField fx:id="textNewPassword" layoutX="93.0" layoutY="269.25" prefHeight="27.0" prefWidth="230.0" promptText="New Password" />
+      <PasswordField fx:id="textReEnterPassword" layoutX="95.0" layoutY="335.0" prefHeight="27.0" prefWidth="230.0" promptText="Re-enter Password" />
+      <ImageView fitHeight="63.0" fitWidth="63.0" layoutX="95.0" layoutY="411.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="262.0" layoutY="411.0" onMouseClicked="#createButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-check-circle-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+<!--            <ComboBox fx:id="textGender" layoutX="95.0" layoutY="137.75" prefHeight="27.0" prefWidth="230.0" promptText="Gender" visibleRowCount="3">-->
+<!--            </ComboBox>-->
+      <ComboBox fx:id="textGender" layoutX="95.0" layoutY="137.75" prefHeight="27.0" prefWidth="230.0" promptText="Gender">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Female" />
+               <String fx:value="Male" />
+               <String fx:value="Others" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+            <TextField fx:id="textLastName" layoutX="217.0" layoutY="72.0" prefHeight="27.0" prefWidth="115.0" promptText="Last Name" />
+            <Label layoutX="117.0" layoutY="474.0" text="Exit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="277.0" layoutY="474.0" text="Create">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+   </children>
+</AnchorPane>
+   </items>
+</SplitPane>

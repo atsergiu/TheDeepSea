@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="650.0" style="-fx-background-color: CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.RaportOne">
+   <children>
+      <DatePicker fx:id="date1" layoutX="106.0" layoutY="105.0" prefHeight="34.0" prefWidth="184.0" />
+      <DatePicker fx:id="date2" layoutX="445.0" layoutY="106.0" prefHeight="34.0" prefWidth="175.0" />
+      <ImageView fx:id="pdf" fitHeight="48.0" fitWidth="60.0" layoutX="549.0" layoutY="168.0" onMouseClicked="#pdf" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-pdf-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="done" fitHeight="60.0" fitWidth="66.0" layoutX="138.0" layoutY="156.0" onMouseClicked="#done" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-check-circle-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="38.0" layoutY="114.0" text="Start date:" />
+      <Label layoutX="377.0" layoutY="115.0" prefHeight="17.0" prefWidth="54.0" text="End date:" />
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="94.0" layoutX="35.0" layoutY="14.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ScrollPane layoutX="50.0" layoutY="247.0" prefHeight="262.0" prefWidth="579.0">
+         <content>
+            <Label fx:id="text" alignment="TOP_LEFT" prefHeight="547.0" prefWidth="559.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="error" layoutX="270.0" layoutY="202.0" prefHeight="17.0" prefWidth="175.0" textFill="RED" />
+      <Label layoutX="133.0" layoutY="219.0" text="Show report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="540.0" layoutY="221.0" text="Save as PDF">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

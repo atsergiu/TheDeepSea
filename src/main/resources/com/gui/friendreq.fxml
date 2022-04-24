@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="split" dividerPositions="0.3287037037037037" prefHeight="515.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.FriendReq">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="157.0" style="-fx-background-color: #9de3f2;">
+         <children>
+      <ImageView fx:id="exitButtonClick" fitHeight="66.0" fitWidth="66.0" layoutX="77.0" layoutY="385.0" onMouseClicked="#ExitButtonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="accept" fitHeight="66.0" fitWidth="66.0" layoutX="77.0" layoutY="41.0" onMouseClicked="#acceptButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-check-circle-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="decline" fitHeight="66.0" fitWidth="70.0" layoutX="77.0" layoutY="155.0" onMouseClicked="#declineButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-cancel-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="unsend" fitHeight="58.0" fitWidth="66.0" layoutX="81.0" layoutY="271.0" onMouseClicked="#unsendButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-remove-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+            <Label layoutX="91.0" layoutY="107.0" text="Accept">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="221.0" text="Decline">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="338.0" text="Unsend request">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="451.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#unselect" prefHeight="513.0" prefWidth="432.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+
+            <Pagination fx:id="pag" layoutX="39.0" layoutY="97.0" prefHeight="377.0" prefWidth="362.0" />
+
+            <GridPane fx:id="gridPane" prefHeight="97.0" prefWidth="396.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label layoutX="118.0" layoutY="37.0" text="Friend Requests">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+      <ImageView fx:id="history" fitHeight="43.0" fitWidth="54.0" layoutX="375.0" layoutY="9.0" onMouseClicked="#historyButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-time-machine-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+            <Label layoutX="374.0" layoutY="54.0" text="History">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+</AnchorPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="split" dividerPositions="0.28703703703703703" prefHeight="515.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.EventMain">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="289.0" prefWidth="208.0" style="-fx-background-color: #9de3f2;">
+         <children>
+             <ImageView fx:id="notificationBell" fitHeight="65.0" fitWidth="57.0" layoutX="55.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@imgs/icons8-notification-90.png" />
+           </image>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </ImageView>
+             <ImageView fx:id="logoutView" fitHeight="57.0" fitWidth="57.0" layoutX="55.0" layoutY="394.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@imgs/icons8-back-arrow-64.png" />
+           </image>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </ImageView>
+       <ImageView fx:id="create" fitHeight="63.0" fitWidth="57.0" layoutX="55.0" layoutY="228.0" onMouseClicked="#createButton" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@imgs/icons8-sign-up-64.png" />
+           </image>
+           <cursor>
+               <Cursor fx:constant="HAND" />
+           </cursor>
+       </ImageView>
+            <Label layoutX="53.0" layoutY="118.0" text="Notifications">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="285.0" text="Create New Event">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="451.0" text="Exit">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+               <TableView fx:id="tableView" layoutY="118.0" prefHeight="172.0" prefWidth="183.0">
+                   <columns>
+                       <TableColumn fx:id="notification" prefWidth="180.0" text="Notifications" />
+                   </columns>
+               </TableView>
+         </children>
+        </AnchorPane>
+
+<AnchorPane prefHeight="513.0" prefWidth="452.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+
+
+       <TextField fx:id="searchBar" layoutX="70.0" layoutY="56.0" prefHeight="26.0" prefWidth="184.0" promptText="Search " />
+      <CheckBox fx:id="goingFiltru" layoutX="305.0" layoutY="56.0" mnemonicParsing="false" text="I'm going">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></CheckBox>
+      <Pagination fx:id="pag" layoutX="70.0" layoutY="145.0" prefHeight="303.0" prefWidth="337.0" />
+            <GridPane fx:id="grid" layoutX="119.0" layoutY="211.0">
+<!--              <columnConstraints>-->
+<!--                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />-->
+<!--              </columnConstraints>-->
+<!--              <rowConstraints>-->
+<!--                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+<!--              </rowConstraints>-->
+            </GridPane>
+            <Label layoutX="106.0" layoutY="113.0" prefHeight="26.0" prefWidth="99.0" text="Event Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="113.0" prefHeight="26.0" prefWidth="39.0" text="Date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+   </children>
+</AnchorPane>
+</items>
+</SplitPane>

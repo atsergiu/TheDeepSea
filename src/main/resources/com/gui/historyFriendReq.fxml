@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="420.0" prefWidth="404.0" style="-fx-background-color: #CAF0F8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.controller.HistoryFrendReq">
+   <children>
+      <TableView fx:id="tableView" layoutX="50.0" layoutY="42.0" prefHeight="225.0" prefWidth="309.0">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="77.25" text="First Name" />
+          <TableColumn fx:id="lastName" prefWidth="77.25" text="Last Name" />
+            <TableColumn fx:id="status" prefWidth="77.25" text="Status" />
+            <TableColumn fx:id="date" prefWidth="77.25" text="Date" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="back" fitHeight="73.0" fitWidth="85.0" layoutX="168.0" layoutY="302.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/icons8-back-arrow-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
